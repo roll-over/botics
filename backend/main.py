@@ -4,8 +4,8 @@ import os
 
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters.command import Command
-from dotenv import load_dotenv
 from db import collection
+from dotenv import load_dotenv
 
 load_dotenv()
 
