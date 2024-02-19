@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 export default function AllUsers() {
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState([] as any[]);
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {

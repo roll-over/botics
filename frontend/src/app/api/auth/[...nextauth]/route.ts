@@ -1,4 +1,4 @@
-import NextAuth from "next-auth"
+import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 
 const handler = NextAuth({
@@ -10,4 +10,4 @@ const handler = NextAuth({
   ],
 });
 
-export { handler as GET, handler as POST }
+export { handler as GET, handler as POST };

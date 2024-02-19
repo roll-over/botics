@@ -3,6 +3,20 @@ import db from "../../lib/connect-db";
 export async function GET(request: Request) {
   const _db = await db();
 
+  if (!_db) {
+    return new Response(
+      JSON.stringify({
+        error: "Database not connected",
+      }),
+      {
+        headers: {
+          "content-type": "application/json",
+        },
+        status: 500,
+      }
+    );
+  }
+
   const collection = _db.collection("users");
 
   const result = await collection
