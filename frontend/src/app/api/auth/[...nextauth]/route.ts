@@ -8,6 +8,17 @@ const handler = NextAuth({
       clientSecret: process.env.GOOGLE_CLIENT_SECRET ?? "",
     }),
   ],
-});
+  callbacks: {
+    async signIn({ user, account, profile }) {
+      const allowedEmail = 'adrenaline2142@gmail.com';
+      if (user.email === allowedEmail) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+  },
+})
+
 
 export { handler as GET, handler as POST };
