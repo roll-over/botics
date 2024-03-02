@@ -9,4 +9,8 @@ services:
     command: npm start
     ports:
       - "3000:3000"
-    
+  backend:
+    build: ./backend
+    container_name: backend-botics
+    command: python3 main.py
+    working_dir: /backend

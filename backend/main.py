@@ -5,7 +5,7 @@ import os
 from aiogram import Bot, Dispatcher, F, types
 from aiogram.filters.command import Command
 from aiogram.types import KeyboardButton, ReplyKeyboardMarkup
-from backend.messages import (
+from messages import (
     get_help_message,
     get_support_message,
     get_unacceptable_message,
